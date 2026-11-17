@@ -497,3 +497,6 @@ html,body{overflow-x:hidden;max-width:100%}
 .case-imgs.c3 .ph img[src*="clinic-sakae-central"]{object-fit:contain;object-position:50% 50%;background:#ece9e3}
 .case-imgs.c3 .ph:has(img[src*="clinic-sakae-central"]){aspect-ratio:1875/840!important}
 .case-imgs.c3 .ph img[src*="clinic-sakae-central"]{object-fit:cover}
+/* 大須の屋上看板が切れないよう上側を見せる */
+.gallery .gitem .ph img[src*="ad-osu-rooftop"]{object-position:50% 12%}
+.gallery .gitem .ph img[src*="ad-ikeshita-wall"]{object-position:60% 40%}
