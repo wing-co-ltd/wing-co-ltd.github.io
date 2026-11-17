@@ -55,8 +55,6 @@ body{background:var(--ivory);color:var(--ink)}
 .sec-title{font-family:var(--mincho);font-weight:600;letter-spacing:.08em;border-bottom:1px solid var(--line)!important}
 .sec-title span:not(.nb){font-family:Georgia,"Times New Roman",serif!important;font-style:italic;letter-spacing:.32em!important;font-size:12.5px!important;color:var(--gold)!important;margin-bottom:6px}
 .sec-title::after{background:linear-gradient(90deg,var(--gold),var(--gold-l))!important;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
-.rv .sec-title::after,.sec-title.rv::after{width:0}
-.rv.in .sec-title::after,.sec-title.rv.in::after{width:64px}
 .cat,.sub-title{font-family:var(--mincho);font-weight:600;letter-spacing:.06em}
 
 /* 交互の帯で奥行きを出す */
@@ -107,10 +105,7 @@ a.card:hover img,.entry:hover img,.gitem:hover img,a.buy2:hover img{transform:sc
 /* ---------- 上へ戻るボタン ---------- */
 .to-top{border-color:var(--gold-l)!important;background:rgba(255,253,248,.9)!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 
-/* ---------- スクロールで現れる動き ---------- */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.page-hero::before{animation:none}}
+/* スクロール時の時間差表示は使わない（2026-11-18 指示） */
 
 /* ---------- トップの大写真：金の内枠と下部グラデーション ---------- */
 .hero3{position:relative}
@@ -147,3 +142,14 @@ a.card:hover img,.entry:hover img,.gitem:hover img,a.buy2:hover img{transform:sc
 .spec tr:nth-child(odd){background:rgba(255,253,248,.7)}
 @media (max-width:600px){.spec th{padding:14px 16px 0!important}.spec td{padding:2px 16px 14px!important}}
 html{overflow-x:clip}body{overflow-x:clip}
+
+/* ---------- 積極買取の4バナー：写真を見せる構成 ---------- */
+.buy2{min-height:0!important;aspect-ratio:4/5;align-items:flex-end!important;background-size:cover!important;background-position:center!important;
+  border:0!important;border-radius:6px;box-shadow:var(--shadow);isolation:isolate}
+.buy2::before{background:linear-gradient(180deg,rgba(20,16,10,0) 30%,rgba(20,16,10,.25) 55%,rgba(20,16,10,.78) 100%)!important;z-index:0}
+.buy2::after{content:"";position:absolute;inset:8px;border:1px solid rgba(232,214,160,.7);border-radius:3px;pointer-events:none;z-index:1}
+.buy2-text{z-index:2;border-left:0!important;margin:0!important;padding:0 14px 16px!important;width:100%}
+.buy2-text h3{font-family:var(--mincho);font-size:17px!important;letter-spacing:.06em;margin-bottom:4px!important;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.buy2-text h3::after{content:"";display:block;width:26px;height:1px;background:var(--gold-l);margin-top:7px}
+.buy2-text p{font-size:11.5px!important;color:rgba(255,255,255,.92)!important;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+@media (min-width:761px){.buy2{aspect-ratio:3/2}.buy2-text h3{font-size:22px!important}.buy2-text p{font-size:14px!important}}
