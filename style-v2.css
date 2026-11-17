@@ -1,0 +1,149 @@
+/* ============================================================
+   WING デザイン刷新 v2（試作）
+   方針：白〜アイボリー基調・金の細線・余白・明朝の見出し・
+         スクロールでふわっと現れる動き。黒い背景は使わない。
+   ============================================================ */
+:root{
+  --ivory:#faf7f0; --ivory2:#f4efe3; --paper:#fffdf8;
+  --gold:#b08d3c; --gold-d:#8a6a24; --gold-l:#d8c48f; --gold-xl:#efe4c6;
+  --ink:#2a2620; --muted:#7a7366; --line:#e9e1cf;
+  --mincho:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
+  --shadow:0 14px 40px -18px rgba(70,52,18,.28);
+  --shadow-s:0 6px 20px -12px rgba(70,52,18,.30);
+}
+body{background:var(--ivory);color:var(--ink)}
+
+/* ---------- ヘッダー：黒→アイボリーのすりガラス ---------- */
+.site-header{
+  background:rgba(250,247,240,.86)!important;
+  -webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);
+  border-bottom:1px solid rgba(176,141,60,.35)!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.6) inset;
+}
+.logo-mark{color:var(--gold)!important;background:linear-gradient(100deg,#9c7a2e 0%,#d9bf7c 45%,#9c7a2e 70%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.logo-sub{color:var(--ink)!important}
+.site-nav a{color:var(--ink)!important}
+.site-nav a:hover,.site-nav a.on{color:var(--gold-d)!important;border-color:var(--gold)!important}
+.menu-btn{color:var(--gold-d)!important}
+@media (max-width:860px){
+  .site-nav{background:rgba(250,247,240,.97)!important;border-bottom:1px solid var(--gold-l)!important;box-shadow:var(--shadow)}
+  .site-nav a{border-bottom:1px solid var(--line)!important;padding:14px 22px!important}
+}
+
+/* ---------- ページ上部（下層ページ）：金の波線グラフィック ---------- */
+.page-hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 100% 0%,rgba(216,196,143,.28),transparent 60%),
+    radial-gradient(90% 80% at 0% 100%,rgba(216,196,143,.20),transparent 60%),
+    var(--ivory2)!important;
+  border-bottom:1px solid var(--gold-l)!important;
+  padding:64px 24px 54px!important;
+}
+.page-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.9;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 300' preserveAspectRatio='none'><g fill='none' stroke='%23b08d3c' stroke-width='1'><path d='M-20 230 C 180 140 330 290 520 190 S 760 90 840 130' opacity='.55'/><path d='M-20 250 C 190 165 340 305 530 210 S 770 110 840 155' opacity='.35'/><path d='M-20 270 C 200 190 350 320 540 232 S 780 135 840 180' opacity='.22'/></g></svg>") center bottom/100% 100% no-repeat;
+  animation:wv-drift 14s ease-in-out infinite alternate;
+}
+@keyframes wv-drift{from{transform:translateX(-2%)}to{transform:translateX(2%)}}
+.page-hero>*{position:relative}
+.page-hero h1{font-family:var(--mincho);font-weight:600;letter-spacing:.12em;color:var(--ink)}
+.page-hero .eyebrow{letter-spacing:.42em}
+.page-hero h1::after{content:"";display:block;width:42px;height:1px;margin:18px auto 0;background:var(--gold)}
+
+/* ---------- セクション見出し ---------- */
+.sec-title{font-family:var(--mincho);font-weight:600;letter-spacing:.08em;border-bottom:1px solid var(--line)!important}
+.sec-title span:not(.nb){font-family:Georgia,"Times New Roman",serif!important;font-style:italic;letter-spacing:.32em!important;font-size:12.5px!important;color:var(--gold)!important;margin-bottom:6px}
+.sec-title::after{background:linear-gradient(90deg,var(--gold),var(--gold-l))!important;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.rv .sec-title::after,.sec-title.rv::after{width:0}
+.rv.in .sec-title::after,.sec-title.rv.in::after{width:64px}
+.cat,.sub-title{font-family:var(--mincho);font-weight:600;letter-spacing:.06em}
+
+/* 交互の帯で奥行きを出す */
+main>section.wrap:nth-of-type(even),body>section.wrap:nth-of-type(even){position:relative}
+body>section.wrap:nth-of-type(even)::before{
+  content:"";position:absolute;inset:0 50%;margin:0 -50vw;z-index:-1;
+  background:linear-gradient(180deg,rgba(244,239,227,0),rgba(244,239,227,.75) 18%,rgba(244,239,227,.75) 82%,rgba(244,239,227,0));
+}
+body{overflow-x:hidden}
+
+/* ---------- カード類：影と金のヘアライン ---------- */
+.card,.entry,.phase,.case,.contact-box,.work,.buy2,.step,.gitem{
+  border:1px solid rgba(176,141,60,.18)!important;border-radius:6px;overflow:hidden;
+  background:var(--paper);box-shadow:var(--shadow-s);
+  transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;
+}
+.card,.entry,.phase,.case{border-top:2px solid var(--gold)!important}
+a.card:hover,.entry:hover,a.buy2:hover,.gitem:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .ph,.entry .ph,.gitem .ph,.buy2 .ph{overflow:hidden}
+.card img,.entry img,.gitem img,.buy2 img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+a.card:hover img,.entry:hover img,.gitem:hover img,a.buy2:hover img{transform:scale(1.045)}
+.mini dt{color:var(--gold-d)!important;font-size:11px;letter-spacing:.08em}
+.badge{background:rgba(255,253,248,.92)!important;border:1px solid var(--gold-l)!important;color:var(--gold-d)!important;border-radius:999px;box-shadow:var(--shadow-s)}
+.gcap,.cap{color:var(--muted)}
+.gitem .gcap{background:linear-gradient(180deg,#f6f0e2,#efe6d2)!important}
+.num-label{font-style:italic}
+
+/* ---------- ボタン ---------- */
+.btn{border-radius:999px!important;border:1px solid var(--gold)!important;background:linear-gradient(180deg,#fffdf8,#f6efdd)!important;color:var(--gold-d)!important;letter-spacing:.1em;box-shadow:var(--shadow-s);transition:all .35s}
+.btn:hover{background:linear-gradient(100deg,#9c7a2e,#c9a95c 55%,#9c7a2e)!important;color:#fff!important}
+
+/* ---------- 写真：わずかなフィルムトーン ---------- */
+.ph img{filter:saturate(1.04) contrast(1.02)}
+
+/* ---------- フッター：黒→アイボリー ---------- */
+.site-footer{
+  position:relative;background:var(--ivory2)!important;color:var(--ink)!important;
+  border-top:0!important;padding-top:72px!important;
+}
+.site-footer::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:46px;pointer-events:none;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 46' preserveAspectRatio='none'><path d='M0 30 C 160 0 300 46 460 22 S 700 6 800 26' fill='none' stroke='%23b08d3c' stroke-width='1' opacity='.7'/><path d='M0 38 C 170 12 320 52 470 32 S 710 16 800 36' fill='none' stroke='%23b08d3c' stroke-width='1' opacity='.35'/></svg>") center/100% 100% no-repeat;
+}
+.site-footer p,.site-footer .copy{color:var(--muted)!important}
+.site-footer nav a{color:var(--ink)!important}
+.site-footer .logo-mark{font-size:26px}
+
+/* ---------- 上へ戻るボタン ---------- */
+.to-top{border-color:var(--gold-l)!important;background:rgba(255,253,248,.9)!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+/* ---------- スクロールで現れる動き ---------- */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.page-hero::before{animation:none}}
+
+/* ---------- トップの大写真：金の内枠と下部グラデーション ---------- */
+.hero3{position:relative}
+.hero3::after{content:"";position:absolute;inset:14px;border:1px solid rgba(232,214,160,.55);pointer-events:none;z-index:2}
+.hero3::before{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,16,10,0),rgba(20,16,10,.55))}
+.h3-text{z-index:3!important}
+.h3-text h1,.h3-text .h3-title{font-family:var(--mincho)}
+
+/* ---------- 見出しの背景に大きな英字を透かしで ---------- */
+.sec-title[data-bg]{position:relative}
+.sec-title[data-bg]::before{
+  content:attr(data-bg);position:absolute;right:0;top:-26px;z-index:-1;pointer-events:none;
+  font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(46px,14vw,96px);line-height:1;
+  letter-spacing:.02em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(176,141,60,.22);
+  max-width:100%;overflow:hidden;text-overflow:clip
+}
+.sec-title{isolation:isolate}
+
+/* ---------- トップの3つの入口：大きな番号を透かしで ---------- */
+.entries{counter-reset:ent}
+.entry{position:relative;counter-increment:ent}
+.entry::after{content:"0" counter(ent);position:absolute;right:14px;bottom:-14px;pointer-events:none;
+  font-family:Georgia,serif;font-style:italic;font-size:92px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(176,141,60,.28)}
+.entry .more{letter-spacing:.12em}
+.entry:hover .more{color:var(--gold-d)}
+
+/* ---------- 表（会社概要・作品データ）：上品な2段組 ---------- */
+.spec{background:transparent!important;border-top:1px solid var(--gold-l)}
+.spec th{background:transparent!important;color:var(--gold-d);font-weight:600;font-size:12.5px!important;letter-spacing:.12em}
+.spec td{background:transparent}
+.spec tr{border-bottom:1px solid var(--line)}
+.spec th,.spec td{border-bottom:0!important}
+.spec tr:nth-child(odd){background:rgba(255,253,248,.7)}
+@media (max-width:600px){.spec th{padding:14px 16px 0!important}.spec td{padding:2px 16px 14px!important}}
+html{overflow-x:clip}body{overflow-x:clip}
