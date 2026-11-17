@@ -514,3 +514,9 @@ html,body{overflow-x:hidden;max-width:100%}
 /* 文章はすべて中央揃え（改行位置が整って見えるように） */
 .lined,.flow,p.lead,p.note,p.work-text,.case>p,.hero-lead,.h3-lead .hero-lead,.contact-box p,.work-note{text-align:center!important}
 .lined .ln{display:inline-block}
+/* 絵画：作家名・題名・作品情報もすべて中央揃え */
+.work-body{text-align:center}
+.work-body .artist,.work-body h3,.work-body .work-sub,.work-body .more-link{text-align:center}
+.work-body .spec th,.work-body .spec td{text-align:center}
+.work-body .spec th{width:auto}
+@media (max-width:600px){.work-body .spec th,.work-body .spec td{text-align:center}}
