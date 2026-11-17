@@ -560,3 +560,15 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 @media (min-width:861px){.site-nav a.sub{display:none}}
 @media (max-width:860px){.site-nav a.sub{padding-left:40px!important}}
 .site-footer nav a.sub{display:none}
+
+/* ---------- 積極買取の4バナー：写真を見せる構成（本番にも反映） ---------- */
+.buy2{min-height:0!important;aspect-ratio:4/5;align-items:flex-end!important;background-size:cover!important;background-position:center!important;
+  border:0!important;border-radius:6px;box-shadow:0 14px 40px -18px rgba(70,52,18,.28);isolation:isolate}
+.buy2::before{background:linear-gradient(180deg,rgba(20,16,10,0) 30%,rgba(20,16,10,.25) 55%,rgba(20,16,10,.78) 100%)!important;z-index:0}
+.buy2::after{content:"";position:absolute;inset:8px;border:1px solid rgba(232,214,160,.7);border-radius:3px;pointer-events:none;z-index:1}
+.buy2-text{z-index:2;border-left:0!important;margin:0!important;padding:0 14px 16px!important;width:100%}
+.buy2-text h3{font-family:"Hiragino Mincho ProN","Yu Mincho",serif;font-size:17px!important;letter-spacing:.06em;margin-bottom:4px!important;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+.buy2-text h3::after{content:"";display:block;width:26px;height:1px;background:#d9c38a;margin-top:7px}
+.buy2-text p{font-size:11.5px!important;color:rgba(255,255,255,.92)!important;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+@media (min-width:761px){.buy2{aspect-ratio:3/2}.buy2-text h3{font-size:22px!important}.buy2-text p{font-size:14px!important}}
+
