@@ -41,3 +41,15 @@
       par.replaceChild(f,t);});
   });
 })();
+/* ページ上部へ戻るボタン（全ページ共通） */
+(function(){
+  function init(){
+    var b=document.createElement("button");b.className="to-top";b.type="button";b.setAttribute("aria-label","ページの一番上へ");
+    b.innerHTML='<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 6l-7 7m7-7l7 7M12 6v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+    document.body.appendChild(b);
+    function upd(){b.classList.toggle("show",window.scrollY>300);}
+    window.addEventListener("scroll",upd,{passive:true});upd();
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
+})();
