@@ -549,3 +549,6 @@ body.pg-left main .nb,body.pg-left main .ln,body.pg-left .page-hero .nb,body.pg-
 body.pg-left section p,body.pg-left section li,body.pg-left section dd,body.pg-left section td,body.pg-left section th,body.pg-left section dt,
 body.pg-left section h3,body.pg-left section h4,body.pg-left section .cap,body.pg-left section .gcap,body.pg-left section figcaption:not(.ph-label),
 body.pg-left .page-hero p{text-align:left!important;text-align-last:auto!important;line-break:auto!important;word-break:normal!important}
+/* iPhone(Safari)の「行の長さをそろえる」自動調整を止め、行末まで詰める */
+body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left td,body.pg-left th,body.pg-left dt,body.pg-left .cap,body.pg-left .gcap,body.pg-left figcaption,
+body.pg-left section h3,body.pg-left section h4{text-wrap:wrap!important;text-wrap-style:auto!important;word-break:normal!important;overflow-wrap:normal}
