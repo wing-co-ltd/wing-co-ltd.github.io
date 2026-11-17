@@ -472,3 +472,10 @@ html,body{overflow-x:hidden;max-width:100%}
 .med-doc .ph{aspect-ratio:1195/212!important;background:#fff}
 .med-doc .ph img{object-fit:contain}
 .med-doc figcaption{background:#efe7da;color:#5f5546;text-align:center;font-size:12.5px;padding:9px 8px}
+.steps{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+.case-img1{margin-top:12px}
+.case-img1 .ph{aspect-ratio:16/10!important;background:#fff}
+.case-img1 .ph img{object-fit:cover}
+.cases{grid-template-columns:1fr}
+@media (min-width:761px){.cases{grid-template-columns:repeat(3,1fr)}}
