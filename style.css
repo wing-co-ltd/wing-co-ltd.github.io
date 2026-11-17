@@ -468,3 +468,7 @@ html,body{overflow-x:hidden;max-width:100%}
 .case-imgs .ph{aspect-ratio:1693/1113!important;background:#fff;border:1px solid var(--line)}
 .case-imgs .ph img{object-fit:contain}
 .case .cap{margin:6px 0 0}
+.med-doc{margin:16px 0 0;border:1px solid var(--line);background:#fff}
+.med-doc .ph{aspect-ratio:1195/212!important;background:#fff}
+.med-doc .ph img{object-fit:contain}
+.med-doc figcaption{background:#efe7da;color:#5f5546;text-align:center;font-size:12.5px;padding:9px 8px}
