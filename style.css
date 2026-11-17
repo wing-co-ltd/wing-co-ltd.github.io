@@ -509,3 +509,5 @@ html,body{overflow-x:hidden;max-width:100%}
 /* 指定位置で改行（iPhone幅に合わせて行を組む） */
 .lined .ln{display:inline-block}
 .lined{text-align:inherit}
+/* 2列カードの物件情報：駅名などが途中で切れないよう字間を詰める */
+@media (max-width:760px){#properties .mini dd,#development .mini dd{letter-spacing:0;font-size:11.5px}}
