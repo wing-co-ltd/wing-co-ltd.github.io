@@ -491,3 +491,9 @@ html,body{overflow-x:hidden;max-width:100%}
 .case-imgs.c3 .ph{aspect-ratio:4/3!important}
 .case-imgs.c3 .ph img{object-fit:cover}
 .case-img1 .ph:has(img[src*="magazine"]){aspect-ratio:952/630!important}
+/* 栄セントラル：看板を中央に、写真を大きく */
+.case-imgs.c3{grid-template-columns:1fr}
+.case-imgs.c3 .ph{aspect-ratio:16/9!important}
+.case-imgs.c3 .ph img[src*="clinic-sakae-central"]{object-fit:contain;object-position:50% 50%;background:#ece9e3}
+.case-imgs.c3 .ph:has(img[src*="clinic-sakae-central"]){aspect-ratio:1875/840!important}
+.case-imgs.c3 .ph img[src*="clinic-sakae-central"]{object-fit:cover}
