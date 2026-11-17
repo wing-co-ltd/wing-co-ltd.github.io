@@ -520,3 +520,6 @@ html,body{overflow-x:hidden;max-width:100%}
 .work-body .spec th,.work-body .spec td{text-align:center}
 .work-body .spec th{width:auto}
 @media (max-width:600px){.work-body .spec th,.work-body .spec td{text-align:center}}
+/* 村上隆作品：少し縮小して周囲に背景の余白を見せる */
+.work.wide .ph{background:#f4f1ea}
+.work.wide .ph img[src*="artwork-murakami"]{object-fit:contain;padding:4%;box-sizing:border-box}
