@@ -554,3 +554,9 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left td,body.pg-left th,b
 body.pg-left section h3,body.pg-left section h4{text-wrap:wrap!important;text-wrap-style:auto!important;word-break:normal!important;overflow-wrap:normal}
 /* iPhone：行末の「、」「。」をぶら下げて、その前の文字が次の行へ送られて右端が空くのを防ぐ */
 body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .gcap,body.pg-left section h3,body.pg-left section h4{hanging-punctuation:allow-end}
+/* メニュー：全ページ同じ並び。不動産ページだけ「保有不動産・開発実績」を不動産の下に字下げで表示 */
+.site-nav a.sub{font-size:13px;color:var(--muted)}
+.site-nav a.sub::before{content:"└ ";color:var(--gold)}
+@media (min-width:861px){.site-nav a.sub{display:none}}
+@media (max-width:860px){.site-nav a.sub{padding-left:40px!important}}
+.site-footer nav a.sub{display:none}

@@ -26,7 +26,7 @@ body{background:var(--ivory);color:var(--ink)}
 .site-nav a:hover,.site-nav a.on{color:var(--gold-d)!important;border-color:var(--gold)!important}
 .menu-btn{color:var(--gold-d)!important}
 @media (max-width:860px){
-  .site-nav{background:rgba(250,247,240,.97)!important;border-bottom:1px solid var(--gold-l)!important;box-shadow:var(--shadow)}
+  .site-nav{background:#faf7f0!important;-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:1px solid var(--gold-l)!important;box-shadow:var(--shadow)}
   .site-nav a{border-bottom:1px solid var(--line)!important;padding:14px 22px!important}
 }
 
