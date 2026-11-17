@@ -541,3 +541,6 @@ html,body{overflow-x:hidden;max-width:100%}
 body.pg-left p.lft,body.pg-left li.lft{text-align:left!important;text-align-last:auto;word-break:normal;line-break:strict}
 body.pg-left p.lft .nb,body.pg-left li.lft .nb{display:inline-block}
 body.pg-left p.lft.hero-lead{text-align:left!important}
+/* 絵画以外のページ：本文は普通の左寄せ（行末まで詰めて自然に折り返す） */
+body.pg-left p.lft,body.pg-left li.lft{line-break:auto;word-break:normal;text-align:left!important}
+body.pg-left p.lft .nb,body.pg-left li.lft .nb,body.pg-left p.lft .ln{display:inline!important;white-space:normal}
