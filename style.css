@@ -537,3 +537,7 @@ html,body{overflow-x:hidden;max-width:100%}
 .sale-banner{display:block;max-width:340px;margin:28px auto 8px;padding:8px 12px;gap:0;background:transparent;border:1px solid var(--line);font-size:12px;color:var(--muted);font-weight:400;line-height:1.7}
 .sale-banner:hover{background:#faf6ee;color:#7a5b22}
 .works+.sale-banner{margin-top:30px}
+/* 絵画以外のページ：本文は左寄せ。文節（.nb）単位で折り返し、単語や「・」の列挙の途中では改行しない */
+body.pg-left p.lft,body.pg-left li.lft{text-align:left!important;text-align-last:auto;word-break:normal;line-break:strict}
+body.pg-left p.lft .nb,body.pg-left li.lft .nb{display:inline-block}
+body.pg-left p.lft.hero-lead{text-align:left!important}
