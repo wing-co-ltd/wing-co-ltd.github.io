@@ -560,8 +560,3 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 @media (min-width:861px){.site-nav a.sub{display:none}}
 @media (max-width:860px){.site-nav a.sub{padding-left:40px!important}}
 .site-footer nav a.sub{display:none}
-
-
-
-/* 積極買取の4バナー：元の構成のまま、背景写真を少し暗めにして文字を引き立てる（2026-11-18） */
-.buy2::before{background:linear-gradient(90deg,rgba(30,25,20,.92) 0%,rgba(30,25,20,.74) 55%,rgba(30,25,20,.46) 100%)!important}

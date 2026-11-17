@@ -66,14 +66,14 @@ body>section.wrap:nth-of-type(even)::before{
 body{overflow-x:hidden}
 
 /* ---------- カード類：影と金のヘアライン ---------- */
-.card,.entry,.phase,.case,.contact-box,.work,.buy2,.step,.gitem{
+.card,.entry,.phase,.case,.contact-box,.work,.step,.gitem{
   border:1px solid rgba(176,141,60,.18)!important;border-radius:6px;overflow:hidden;
   background:var(--paper);box-shadow:var(--shadow-s);
   transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s;
 }
 .card,.entry,.phase,.case{border-top:2px solid var(--gold)!important}
-a.card:hover,.entry:hover,a.buy2:hover,.gitem:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
-.card .ph,.entry .ph,.gitem .ph,.buy2 .ph{overflow:hidden}
+a.card:hover,.entry:hover,.gitem:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card .ph,.entry .ph,.gitem .ph{overflow:hidden}
 .card img,.entry img,.gitem img,.buy2 img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 a.card:hover img,.entry:hover img,.gitem:hover img,a.buy2:hover img{transform:scale(1.045)}
 .mini dt{color:var(--gold-d)!important;font-size:11px;letter-spacing:.08em}
