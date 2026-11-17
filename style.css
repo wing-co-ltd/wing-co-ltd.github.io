@@ -511,3 +511,6 @@ html,body{overflow-x:hidden;max-width:100%}
 .lined{text-align:inherit}
 /* 2列カードの物件情報：駅名などが途中で切れないよう字間を詰める */
 @media (max-width:760px){#properties .mini dd,#development .mini dd{letter-spacing:0;font-size:11.5px}}
+/* 文章はすべて中央揃え（改行位置が整って見えるように） */
+.lined,.flow,p.lead,p.note,p.work-text,.case>p,.hero-lead,.h3-lead .hero-lead,.contact-box p,.work-note{text-align:center!important}
+.lined .ln{display:inline-block}
