@@ -461,3 +461,10 @@ html,body{overflow-x:hidden;max-width:100%}
 #properties .mini dt,#development .mini dt{margin-top:6px}
 #properties .mini dd,#development .mini dd{margin:0}
 }
+.nb{display:inline-block;max-width:100%}
+.sec-title span.nb{display:inline-block;font-family:inherit;font-size:inherit;letter-spacing:inherit;color:inherit;margin:0;font-weight:inherit}
+.gallery .gitem .gcap{display:block!important;text-align:center}
+.case-imgs{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px}
+.case-imgs .ph{aspect-ratio:1693/1113!important;background:#fff;border:1px solid var(--line)}
+.case-imgs .ph img{object-fit:contain}
+.case .cap{margin:6px 0 0}
