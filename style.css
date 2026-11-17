@@ -487,3 +487,7 @@ html,body{overflow-x:hidden;max-width:100%}
 .phase li:last-child{border-bottom:0}
 .phase li::before{content:"";position:absolute;left:2px;top:12px;width:5px;height:5px;background:var(--gold);border-radius:50%}
 @media (min-width:761px){.phases{grid-template-columns:repeat(4,1fr);gap:14px}.phase li{font-size:14px}}
+.med-doc .ph{aspect-ratio:1696/768!important}
+.case-imgs.c3 .ph{aspect-ratio:4/3!important}
+.case-imgs.c3 .ph img{object-fit:cover}
+.case-img1 .ph:has(img[src*="magazine"]){aspect-ratio:952/630!important}
