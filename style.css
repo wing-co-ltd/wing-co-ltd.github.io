@@ -500,3 +500,12 @@ html,body{overflow-x:hidden;max-width:100%}
 /* 大須の屋上看板が切れないよう上側を見せる */
 .gallery .gitem .ph img[src*="ad-osu-rooftop"]{object-position:50% 12%}
 .gallery .gitem .ph img[src*="ad-ikeshita-wall"]{object-position:60% 40%}
+/* 長文：自然に流し込み、両端揃えで行末をそろえる */
+.flow{word-break:normal;line-break:strict;overflow-wrap:break-word;text-wrap:wrap}
+.flow .nb{display:inline}
+.lead.flow,.work-text.flow,.note.flow,.case p.flow{text-align:justify;text-justify:inter-character}
+.lead.flow,.work-text.flow,.note.flow,.case p.flow{text-align:left}
+.hero-lead.flow{text-align:center}
+/* 指定位置で改行（iPhone幅に合わせて行を組む） */
+.lined .ln{display:inline-block}
+.lined{text-align:inherit}
