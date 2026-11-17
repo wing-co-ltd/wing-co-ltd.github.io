@@ -544,3 +544,8 @@ body.pg-left p.lft.hero-lead{text-align:left!important}
 /* 絵画以外のページ：本文は普通の左寄せ（行末まで詰めて自然に折り返す） */
 body.pg-left p.lft,body.pg-left li.lft{line-break:auto;word-break:normal;text-align:left!important}
 body.pg-left p.lft .nb,body.pg-left li.lft .nb,body.pg-left p.lft .ln{display:inline!important;white-space:normal}
+/* 絵画以外のページ（不動産・医療ほか）：文節での改行をやめ、左詰めで行末まで埋める（徹底） */
+body.pg-left main .nb,body.pg-left main .ln,body.pg-left .page-hero .nb,body.pg-left section .nb,body.pg-left section .ln{display:inline!important;white-space:normal!important;max-width:none}
+body.pg-left section p,body.pg-left section li,body.pg-left section dd,body.pg-left section td,body.pg-left section th,body.pg-left section dt,
+body.pg-left section h3,body.pg-left section h4,body.pg-left section .cap,body.pg-left section .gcap,body.pg-left section figcaption:not(.ph-label),
+body.pg-left .page-hero p{text-align:left!important;text-align-last:auto!important;line-break:auto!important;word-break:normal!important}
