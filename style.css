@@ -565,3 +565,17 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 @keyframes h3fade5{0%{opacity:0;transform:scale(1.1)}5%{opacity:1}25%{opacity:1}31%{opacity:0;transform:scale(1)}100%{opacity:0}}
 .h3-s{animation-name:h3fade5!important;animation-duration:10s;transform:scale(1.1)}
 @media (max-width:760px){.hero3{height:68svh!important;min-height:430px!important;max-height:600px!important}}
+/* トップ写真3枚目：所有絵画2点（風光明媚・真実）を並べて見せる。
+   スマホは上下、パソコンは左右。左右から少し寄ってくる動きを付ける */
+.h3-duo{display:grid;grid-template-rows:1fr 1fr;gap:6px;padding:6px;box-sizing:border-box;background:#efe7d6!important}
+.h3-duo .duo{background-size:cover;background-position:center;position:relative;box-shadow:0 10px 30px -14px rgba(40,30,10,.5)}
+.h3-duo .duo::after{content:"";position:absolute;inset:6px;border:1px solid rgba(232,214,160,.75);pointer-events:none}
+.h3-duo .duo-a{background-position:55% 45%;animation:duoA 10s infinite;animation-delay:5s}
+.h3-duo .duo-b{background-position:50% 50%;animation:duoB 10s infinite;animation-delay:5s}
+@keyframes duoA{0%{transform:translateX(-5%)}30%{transform:translateX(0)}100%{transform:translateX(0)}}
+@keyframes duoB{0%{transform:translateX(5%)}30%{transform:translateX(0)}100%{transform:translateX(0)}}
+@media (min-width:761px){.h3-duo{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  @keyframes duoA{0%{transform:translateY(-4%)}30%{transform:none}100%{transform:none}}
+  @keyframes duoB{0%{transform:translateY(4%)}30%{transform:none}100%{transform:none}}}
+@media (prefers-reduced-motion:reduce){.h3-duo .duo{animation:none}}
+@media (max-width:760px){.h3-duo{grid-template-rows:1.15fr 1fr}.h3-duo .duo-b{order:-1;background-position:52% 48%}.h3-duo .duo-a{background-position:40% 40%}}
