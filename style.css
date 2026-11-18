@@ -560,3 +560,8 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 @media (min-width:861px){.site-nav a.sub{display:none}}
 @media (max-width:860px){.site-nav a.sub{padding-left:40px!important}}
 .site-footer nav a.sub{display:none}
+/* トップの写真4枚：引き気味から始めて、さらに引いていく動きを速く（2026-11-18）
+   スマホでは写真の高さを抑えて、左右の切り取りを減らし広く見せる */
+@keyframes h3fade5{0%{opacity:0;transform:scale(1.1)}5%{opacity:1}25%{opacity:1}31%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.h3-s{animation-name:h3fade5!important;animation-duration:10s;transform:scale(1.1)}
+@media (max-width:760px){.hero3{height:68svh!important;min-height:430px!important;max-height:600px!important}}

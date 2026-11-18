@@ -154,3 +154,7 @@ html{overflow-x:clip}body{overflow-x:clip}
 .pband-link{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.24em;color:#fff;text-decoration:none;padding:6px 0}
 .pband-link::after{content:"";width:36px;height:1px;background:currentColor;transition:width .6s cubic-bezier(.2,.7,.2,1)}
 .pband-link:hover::after{width:68px}
+/* 大須の写真帯：引き気味に見せる（帯の高さと視差の余白を抑えて、写真の切り取りを減らす） */
+.pband{height:72svh;min-height:420px}
+.pband-bg{top:-7%;height:114%}
+@media (min-width:761px){.pband{height:80vh}}

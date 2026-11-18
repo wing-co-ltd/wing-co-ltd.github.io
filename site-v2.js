@@ -8,7 +8,7 @@
   if(!bgs.length||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
   var tick=false;
   function run(){var vh=window.innerHeight;bgs.forEach(function(bg){var r=bg.parentElement.getBoundingClientRect();
-    if(r.bottom>0&&r.top<vh){var p=(r.top+r.height/2-vh/2)/vh;bg.style.transform="translate3d(0,"+(p*-9)+"%,0)";}});tick=false;}
+    if(r.bottom>0&&r.top<vh){var p=(r.top+r.height/2-vh/2)/vh;bg.style.transform="translate3d(0,"+(p*-5)+"%,0)";}});tick=false;}
   window.addEventListener("scroll",function(){if(!tick){tick=true;requestAnimationFrame(run);}},{passive:true});
   window.addEventListener("resize",run);run();
 })();
