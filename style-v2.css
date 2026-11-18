@@ -158,3 +158,5 @@ html{overflow-x:clip}body{overflow-x:clip}
 .pband{height:72svh;min-height:420px}
 .pband-bg{top:-7%;height:114%}
 @media (min-width:761px){.pband{height:80vh}}
+/* 大須の写真帯：スクロール時の上下の動きを大きく（動きの幅に合わせて写真の余白を確保） */
+.pband-bg{top:-12%;height:124%}
