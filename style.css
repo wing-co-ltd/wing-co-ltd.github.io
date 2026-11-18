@@ -584,3 +584,4 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 /* 建築中の記録：写真を切り取らず全体を見せる（引きで敷地の広さが分かるように） */
 .gallery.build .gitem .ph{background:#efe9dc!important}
 .gallery.build .gitem .ph img{object-fit:contain!important}
+.gallery.build .gitem:first-child{grid-column:1/-1}
