@@ -579,4 +579,5 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
   @keyframes duoB{0%{transform:translateY(4%)}30%{transform:none}100%{transform:none}}}
 @media (prefers-reduced-motion:reduce){.h3-duo .duo{animation:none}}
 @media (max-width:760px){.h3-duo{grid-template-rows:1.15fr 1fr}.h3-duo .duo-b{order:-1;background-position:52% 48%}.h3-duo .duo-a{background-position:40% 40%}}
-.h3-s.h3-house{background-position:50% 78%!important}
+.h3-s.h3-house{background-position:50% 75%!important}
+.h3-s.h3-house{background-position:50% 100%!important;transform-origin:50% 100%}
