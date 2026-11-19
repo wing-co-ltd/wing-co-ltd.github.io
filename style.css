@@ -585,3 +585,8 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 .gallery.build .gitem .ph{background:#efe9dc!important}
 .gallery.build .gitem .ph img{object-fit:contain!important}
 .gallery.build .gitem:first-child{grid-column:1/-1}
+/* お問い合わせのメールアドレス */
+.contact-box .mail-line{margin:14px 0 4px}
+.contact-box .mail{margin:0}
+.contact-box .mail a{display:inline-block;font-size:17px;letter-spacing:.04em;color:var(--gold-d,#8a6a24);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;word-break:break-all}
+.site-footer p a{color:inherit}
