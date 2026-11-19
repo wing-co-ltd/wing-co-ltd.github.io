@@ -590,3 +590,9 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 .contact-box .mail{margin:0}
 .contact-box .mail a{display:inline-block;font-size:17px;letter-spacing:.04em;color:var(--gold-d,#8a6a24);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px;word-break:break-all}
 .site-footer p a{color:inherit}
+/* お問い合わせ：アドレスは出さず、押すとメールソフトが開くバナー */
+.contact-box .mail-btn{display:flex;align-items:center;justify-content:center;gap:10px;margin:16px 0 0;padding:15px 18px;border-radius:999px;
+  background:linear-gradient(100deg,#9c7a2e,#c9a95c 55%,#9c7a2e);color:#fff!important;text-decoration:none;font-size:15px;letter-spacing:.1em;
+  box-shadow:0 8px 20px -10px rgba(90,66,20,.55)}
+.contact-box .mail-btn:active{transform:translateY(1px)}
+.contact-box .mail-ic{font-size:17px;line-height:1}
