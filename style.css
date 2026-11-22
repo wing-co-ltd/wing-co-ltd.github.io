@@ -618,3 +618,6 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 .pers-pair figcaption{margin-top:5px;font-size:12.5px;color:var(--muted)}
 .pers-pair .ph .ph-label{display:none}
 .pers-pair .ph:has(img[src*="-d.jpg"]){aspect-ratio:14/15!important}
+.pers-one{display:grid;gap:8px}
+.pers-one .ph{aspect-ratio:3/2!important;background:#fff;border:1px solid var(--line)}
+.pers-one .ph img{object-fit:cover}
