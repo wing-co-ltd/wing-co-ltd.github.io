@@ -644,3 +644,10 @@ a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:
 .sns-box .sns-list li::before{content:none!important}
 .sns-box b{color:#2a2620}
 .sns-box .sns-wait{color:var(--muted);font-size:13.5px;margin:0}
+/* パース4枚：2列で表示 */
+.pers-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pers-grid figure{margin:0}
+.pers-grid .ph{aspect-ratio:3/2!important;background:#fff;border:1px solid var(--line)}
+.pers-grid .ph img{object-fit:cover}
+.pers-grid .ph .ph-label{display:none}
+.pers-grid figcaption{margin-top:4px;font-size:12.5px;color:var(--muted)}
