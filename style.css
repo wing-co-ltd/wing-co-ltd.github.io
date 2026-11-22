@@ -635,3 +635,12 @@ a.lb-open .lb-badge{position:absolute;right:10px;bottom:10px;z-index:2}
 .lb{background:#faf7f0!important;z-index:1000}
 .lb p{border:0!important;padding:0!important;max-width:none}
 a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:.06em;color:#8a6a24;text-align:right}
+/* SNS戦略の説明 */
+.sns-box{margin:18px 0 4px;padding:14px 16px;background:#fffaf0;border:1px solid #e9dcb8;border-radius:6px}
+.sns-box .sns-head{margin:0 0 6px;font-weight:600;color:#8a6a24;letter-spacing:.06em}
+.sns-box p{margin:0 0 8px;font-size:14px;line-height:1.85}
+.sns-box .sns-list{list-style:none;margin:0;padding:0}
+.sns-box .sns-list li{margin:0 0 6px;font-size:13.5px;line-height:1.7;padding-left:0}
+.sns-box .sns-list li::before{content:none!important}
+.sns-box b{color:#2a2620}
+.sns-box .sns-wait{color:var(--muted);font-size:13.5px;margin:0}
