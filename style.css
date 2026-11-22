@@ -621,3 +621,16 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 .pers-one{display:grid;gap:8px}
 .pers-one .ph{aspect-ratio:3/2!important;background:#fff;border:1px solid var(--line)}
 .pers-one .ph img{object-fit:cover}
+/* タップで写真を順に見る（ライトボックス） */
+a.lb-open{display:block;position:relative;text-decoration:none}
+a.lb-open .lb-badge{position:absolute;right:10px;bottom:10px;z-index:2}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(250,247,240,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:56px 12px 24px;box-sizing:border-box}
+.lb img{max-width:100%;max-height:72vh;object-fit:contain;box-shadow:0 14px 40px -18px rgba(70,52,18,.4)}
+.lb .lb-cap{margin-top:12px;font-size:14px;color:#2a2620;letter-spacing:.06em}
+.lb .lb-n{margin-top:4px;font-size:12px;color:#8a6a24}
+.lb button{position:absolute;border:1px solid #d8c48f;background:#fffdf8;color:#8a6a24;border-radius:50%;width:44px;height:44px;font-size:20px;line-height:1;cursor:pointer}
+.lb .lb-x{top:12px;right:12px}
+.lb .lb-p{left:10px;top:50%;transform:translateY(-50%)}
+.lb .lb-q{right:10px;top:50%;transform:translateY(-50%)}
+.lb{background:#faf7f0!important;z-index:1000}
+.lb p{border:0!important;padding:0!important;max-width:none}

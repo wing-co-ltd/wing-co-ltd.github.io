@@ -63,3 +63,22 @@
   }
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();
 })();
+/* ライトボックス：data-lb の写真を順に表示（全ページ共通） */
+(function(){
+  document.addEventListener("click",function(e){
+    var a=e.target.closest&&e.target.closest("a.lb-open");if(!a)return;e.preventDefault();
+    var items=JSON.parse(a.getAttribute("data-lb")),i=0,v=(document.querySelector('link[href*="style.css?v="]')||{}).href||"";
+    var q=(v.split("?v=")[1]||"");
+    var box=document.createElement("div");box.className="lb";
+    box.innerHTML='<button class="lb-x" aria-label="閉じる">✕</button><button class="lb-p" aria-label="前へ">‹</button><img alt=""><p class="lb-cap"></p><p class="lb-n"></p><button class="lb-q" aria-label="次へ">›</button>';
+    var im=box.querySelector("img"),cap=box.querySelector(".lb-cap"),n=box.querySelector(".lb-n");
+    function show(k){i=(k+items.length)%items.length;im.src=items[i][0]+(q?"?v="+q:"");im.alt=items[i][1];cap.textContent=items[i][1];n.textContent=(i+1)+" / "+items.length;}
+    function close(){box.remove();document.body.style.overflow="";document.removeEventListener("keydown",key);}
+    function key(ev){if(ev.key==="Escape")close();if(ev.key==="ArrowRight")show(i+1);if(ev.key==="ArrowLeft")show(i-1);}
+    box.querySelector(".lb-x").onclick=close;box.querySelector(".lb-p").onclick=function(){show(i-1)};box.querySelector(".lb-q").onclick=function(){show(i+1)};
+    box.addEventListener("click",function(ev){if(ev.target===box)close();});
+    var x0=null;box.addEventListener("touchstart",function(ev){x0=ev.touches[0].clientX},{passive:true});
+    box.addEventListener("touchend",function(ev){if(x0===null)return;var d=ev.changedTouches[0].clientX-x0;if(Math.abs(d)>40)show(i+(d<0?1:-1));x0=null;});
+    document.addEventListener("keydown",key);document.body.style.overflow="hidden";document.body.appendChild(box);show(0);
+  });
+})();
