@@ -608,3 +608,13 @@ body.pg-left p,body.pg-left li,body.pg-left dd,body.pg-left .cap,body.pg-left .g
 .case .case-tags{list-style:none;margin:8px 0 14px;padding:0;display:flex;flex-wrap:wrap;gap:7px}
 .case .case-tags li{margin:0;padding:4px 12px;font-size:13px;letter-spacing:.04em;color:#8a6a24;background:#fffaf0;border:1px solid #d8c48f;border-radius:999px;line-height:1.5}
 .case .case-tags li::before{content:none!important}
+/* アモーレ名古屋院：内装パース（白模型 → 完成パース） */
+.case .pers-head{margin:22px 0 8px;font-weight:600;color:#8a6a24;letter-spacing:.06em}
+.pers-list{display:grid;gap:14px}
+.pers-pair{margin:0}
+.pers-pair .pp{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.pers-pair .ph{aspect-ratio:3/2!important;background:#fff;border:1px solid var(--line)}
+.pers-pair .ph img{object-fit:cover}
+.pers-pair figcaption{margin-top:5px;font-size:12.5px;color:var(--muted)}
+.pers-pair .ph .ph-label{display:none}
+.pers-pair .ph:has(img[src*="-d.jpg"]){aspect-ratio:14/15!important}
