@@ -656,3 +656,4 @@ a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:
 .pers-grid.inside figure.wide .ph{aspect-ratio:4/3!important}
 .pers-grid.inside figure:not(.wide) .ph{aspect-ratio:3/4!important}
 .pers-grid.inside .ph img[src*="amore-in-sign"]{object-position:72% 40%}
+.osaka-bld .ph{aspect-ratio:3/4!important}.osaka-bld .ph img{object-fit:cover;object-position:60% 60%}
