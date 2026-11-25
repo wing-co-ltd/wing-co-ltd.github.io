@@ -677,3 +677,30 @@ body.pg-left .h3-text h1 .nb{display:inline-block!important}
 .studio-steps .st-doc{max-width:none}
 .studio-steps .st-doc .ph{aspect-ratio:4/3!important;overflow:hidden}
 .studio-steps .st-doc .ph img{width:100%;height:100%!important;object-fit:cover;object-position:50% 0}
+/* スタジオ再建：課題 → 提案・指示 */
+.prop-sum{list-style:none;margin:6px 0 14px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.prop-sum li{margin:0;padding:8px 10px;background:#2a2620;color:#f3e6c6;font-size:13px;font-weight:600;border-radius:4px;text-align:center;letter-spacing:.04em}
+.prop-sum li::before{content:"✓ ";color:#d8c48f}
+.studio-steps .ip{margin:4px 0 0}
+.studio-steps .ip p{margin:0!important;font-size:13.5px!important;line-height:1.75}
+.studio-steps .ip span{display:inline-block;margin-right:6px;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:600;letter-spacing:.06em;vertical-align:1px}
+.studio-steps .ip-i span{background:#efe9dc;color:#6b6455}
+.studio-steps .ip-p{padding:8px 10px;background:#fff;border:1px solid #d8c48f;border-radius:4px}
+.studio-steps .ip-p span{background:#b08d3c;color:#fff}
+.studio-steps .ip-arrow{text-align:center;color:#b08d3c;font-size:16px!important;line-height:1.4!important}
+.st-docs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.st-docs figure{margin:0}
+.st-docs .ph{aspect-ratio:3/4!important;overflow:hidden;background:#fff;border:1px solid #e9dcb8;box-shadow:0 8px 18px -12px rgba(70,52,18,.45)}
+.st-docs .ph img{width:100%;height:100%!important;object-fit:cover;object-position:50% 0}
+.st-docs .ph .ph-label{display:none}
+.st-docs figcaption{margin-top:4px;font-size:11.5px;color:var(--muted);line-height:1.5}
+.st-docs .ph:has(img[src*="trainer-zoom"]){aspect-ratio:3/4!important}
+.st-docs .ph img[src*="trainer-zoom"]{object-position:0 0;object-fit:cover}
+.studio-steps .ip span{display:inline!important;margin:0!important;padding:0!important;background:none!important;color:inherit!important;font-size:inherit!important;font-weight:inherit!important;border-radius:0!important}
+.studio-steps .ip .lab{display:inline-block;margin-right:6px;padding:1px 8px;border-radius:999px;font-size:11px;letter-spacing:.06em;vertical-align:1px}
+.studio-steps .ip-i .lab{background:#efe9dc;color:#6b6455}
+.studio-steps .ip-p .lab{background:#b08d3c;color:#fff}
+.studio-steps p.ip-arrow{text-align:center!important}
+.st-docs .ph img[src*="trainer-zoom"]{object-fit:contain!important;object-position:50% 50%!important;background:#fff}
+body.pg-left .studio-steps p.ip-arrow{text-align:center!important}
+.st-docs .ph img[src*="trainer-zoom"]{object-fit:cover!important;object-position:0 0!important}
