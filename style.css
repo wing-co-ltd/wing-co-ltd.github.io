@@ -668,3 +668,8 @@ a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:
 .studio-steps .st p:not(.st-n){margin:0;font-size:13.5px;line-height:1.8}
 @media (min-width:761px){.studio-steps{grid-template-columns:1fr 1fr}}
 body.pg-left .h3-text h1 .nb{display:inline-block!important}
+.studio-steps .st-doc{margin-top:10px;max-width:62%}
+.studio-steps .st-doc .ph{aspect-ratio:auto!important;height:auto;background:#fff;border:1px solid #e9dcb8;box-shadow:0 8px 18px -12px rgba(70,52,18,.45)}
+.studio-steps .st-doc .ph img{position:static!important;width:100%;height:auto;display:block}
+.studio-steps .st-doc .ph .ph-label{display:none}
+.studio-steps .st-doc .st-cap{margin:4px 0 0!important;font-size:11.5px!important;color:var(--muted)}
