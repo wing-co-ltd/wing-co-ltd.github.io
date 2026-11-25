@@ -661,3 +661,9 @@ a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:
 .sub-links{margin-top:14px;gap:8px;flex-wrap:wrap}
 .studio-list{margin:4px 0 12px;padding-left:1.2em}
 .studio-list li{margin:0 0 7px;font-size:14px;line-height:1.75}
+.studio-steps{display:grid;gap:10px;margin:6px 0 12px}
+.studio-steps .st{padding:12px 14px;background:#fffaf0;border:1px solid #e9dcb8;border-left:3px solid #b08d3c;border-radius:5px}
+.studio-steps .st-n{margin:0;font-family:Georgia,serif;font-style:italic;font-size:12px;color:#b08d3c;letter-spacing:.12em}
+.studio-steps h4{margin:2px 0 4px;font-size:15px;color:#2a2620}
+.studio-steps .st p:not(.st-n){margin:0;font-size:13.5px;line-height:1.8}
+@media (min-width:761px){.studio-steps{grid-template-columns:1fr 1fr}}
