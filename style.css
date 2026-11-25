@@ -667,3 +667,4 @@ a.lb-open .lb-more{display:block;margin-top:8px;font-size:13.5px;letter-spacing:
 .studio-steps h4{margin:2px 0 4px;font-size:15px;color:#2a2620}
 .studio-steps .st p:not(.st-n){margin:0;font-size:13.5px;line-height:1.8}
 @media (min-width:761px){.studio-steps{grid-template-columns:1fr 1fr}}
+body.pg-left .h3-text h1 .nb{display:inline-block!important}
