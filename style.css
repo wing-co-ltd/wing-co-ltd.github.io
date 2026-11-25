@@ -704,3 +704,7 @@ body.pg-left .h3-text h1 .nb{display:inline-block!important}
 .st-docs .ph img[src*="trainer-zoom"]{object-fit:contain!important;object-position:50% 50%!important;background:#fff}
 body.pg-left .studio-steps p.ip-arrow{text-align:center!important}
 .st-docs .ph img[src*="trainer-zoom"]{object-fit:cover!important;object-position:0 0!important}
+/* 決算書の資料イメージは1列で大きく */
+.st-docs.one{grid-template-columns:1fr}
+.st-docs.one .ph{aspect-ratio:4/5!important}
+.st-docs.one .ph{aspect-ratio:auto!important;height:auto}.st-docs.one .ph img{position:static!important;height:auto!important;object-fit:contain}
