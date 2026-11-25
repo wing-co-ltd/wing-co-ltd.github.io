@@ -673,3 +673,7 @@ body.pg-left .h3-text h1 .nb{display:inline-block!important}
 .studio-steps .st-doc .ph img{position:static!important;width:100%;height:auto;display:block}
 .studio-steps .st-doc .ph .ph-label{display:none}
 .studio-steps .st-doc .st-cap{margin:4px 0 0!important;font-size:11.5px!important;color:var(--muted)}
+/* 資料イメージ：横幅いっぱい、縦は上部だけ見せて切る */
+.studio-steps .st-doc{max-width:none}
+.studio-steps .st-doc .ph{aspect-ratio:4/3!important;overflow:hidden}
+.studio-steps .st-doc .ph img{width:100%;height:100%!important;object-fit:cover;object-position:50% 0}
